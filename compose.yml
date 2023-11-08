@@ -1,0 +1,33 @@
+services:
+  app:
+    container_name: app
+    build: ./conf/php
+    volumes:
+      - .:/var/www
+  nginx:
+    image: nginx
+    container_name: nginx
+    ports:
+      - 10080:80
+    volumes:
+      - .:/var/www
+      - ./conf/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    working_dir: /var/www
+    depends_on:
+      - app
+  db:
+    image: mariadb:11.1
+    container_name: db
+    environment:
+      MARIADB_ROOT_PASSWORD: rootpass
+      MARIADB_USER: dbuser
+      MARIADB_PASSWORD: dbpass
+      MARIADB_DATABASE: dbname
+      TZ: 'UTC'
+    volumes:
+      - ./conf/mysql/data:/var/lib/mysql
+      - ./conf/mysql/server.cnf:/etc/mysql/conf.d/server.cnf
+      - ./conf/mysql/client.cnf:/etc/mysql/conf.d/client.cnf
+      - ./conf/mysql/initdb.d:/docker-entrypoint-initdb.d
+    ports:
+      - 13306:3306
