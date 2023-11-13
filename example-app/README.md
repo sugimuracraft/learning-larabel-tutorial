@@ -67,8 +67,14 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 # Application Details
 
-## Customer
+## Customer and Invoice (Issue 2)
+
+see: [How to Build a REST API With Laravel: PHP Full Course](https://www.youtube.com/watch?v=YGqCZjdgJJk)
+
+
+# Create Models
 
 ```bash
 $ php artisan make:model Customer --all
+$ php artisan make:model Invoice --all
 ```
