@@ -1,3 +1,6 @@
+conf/mysql/data/*
+!conf/mysql/data/.gitkeep
+
 /vendor/
 node_modules/
 npm-debug.log
