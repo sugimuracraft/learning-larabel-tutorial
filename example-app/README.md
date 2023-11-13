@@ -78,3 +78,10 @@ see: [How to Build a REST API With Laravel: PHP Full Course](https://www.youtube
 $ php artisan make:model Customer --all
 $ php artisan make:model Invoice --all
 ```
+
+# Create Resources
+
+```bash
+php artisan make:resource V1/CustomerResource
+php artisan make:resource V1/CustomerCollection
+```
