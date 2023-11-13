@@ -84,4 +84,6 @@ $ php artisan make:model Invoice --all
 ```bash
 php artisan make:resource V1/CustomerResource
 php artisan make:resource V1/CustomerCollection
+php artisan make:resource V1/InvoiceResource
+php artisan make:resource V1/InvoiceCollection
 ```
