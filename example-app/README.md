@@ -64,3 +64,26 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+# Application Details
+
+## Customer and Invoice (Issue 2)
+
+see: [How to Build a REST API With Laravel: PHP Full Course](https://www.youtube.com/watch?v=YGqCZjdgJJk)
+
+
+# Create Models
+
+```bash
+$ php artisan make:model Customer --all
+$ php artisan make:model Invoice --all
+```
+
+# Create Resources
+
+```bash
+php artisan make:resource V1/CustomerResource
+php artisan make:resource V1/CustomerCollection
+php artisan make:resource V1/InvoiceResource
+php artisan make:resource V1/InvoiceCollection
+```
